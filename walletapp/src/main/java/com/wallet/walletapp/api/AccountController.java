@@ -23,6 +23,11 @@ public class AccountController {
        accountService.insertAccount(account);
     }
 
+    @DeleteMapping(path = "{id}")
+    public int deleteAccountById(@PathVariable("id") UUID id){
+        return accountService.deleteAccountById(id);
+    }
+
     @GetMapping
     public List<Account> getAllAccounts(){
         System.out.println(accountService.getAllAccounts());

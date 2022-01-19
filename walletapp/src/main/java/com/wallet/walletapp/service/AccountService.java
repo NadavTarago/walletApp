@@ -36,10 +36,6 @@ public class AccountService {
         return accountDao.deleteAccountById(id);
     }
 
-    public int updateAccountById(UUID id, Account account) {
-        return accountDao.updateAccountById(id, account);
-    }
-
     public int depositToAccount(UUID id, double depositAmount) {
         return accountDao.depositToAccount(id, depositAmount);
     }
