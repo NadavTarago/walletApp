@@ -37,13 +37,13 @@ public class AccountController {
     }
 
     @PutMapping("/deposit")
-    public void depositToAccount(@RequestParam(name = "id", required = true) UUID id, @RequestParam(name = "deposit", required = true) double depositAmount){
+    public void depositToAccount(@RequestParam(name = "id") UUID id, @RequestParam(name = "deposit") double depositAmount){
         accountService.depositToAccount(id,depositAmount);
         
     }
 
     @PutMapping("/withdrawal")
-    public void withdrawalFromAccount(@RequestParam(name = "id",required = true) UUID id, @RequestParam(name = "withdrawal", required = true) double withdrawalAmount){
+    public void withdrawalFromAccount(@RequestParam(name = "id") UUID id, @RequestParam(name = "withdrawal") double withdrawalAmount){
         accountService.withdrawalFromAccount(id, withdrawalAmount);
     }
 }

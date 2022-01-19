@@ -30,7 +30,6 @@ public class Account {
         this.id =  id;
     }
 
-
     public boolean depositToAccount(double depositAmount){
         if (depositWithdrawalValidation.isAllowedDeposit(depositAmount)){
             setBalance(getBalance() + depositAmount);
@@ -48,8 +47,6 @@ public class Account {
             return false;
         }
     }
-
-
 
     public String getName() {
         return name;
